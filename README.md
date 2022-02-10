@@ -1,2 +1,3 @@
 # test-repo
- my website
+
+This is a testing repo for studying
