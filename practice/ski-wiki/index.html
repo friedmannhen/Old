@@ -211,31 +211,48 @@
   <hr>
   <h3>Form practice!</h3>
    
-  <form action="/form-test">
+  <form action="/form-submit">
+    <button type="button">inside form but dose not submit</button>
+    <!-- name atribiute is for when we submit the form the name will be submited -->
     <p>
     <label for="username">User Name:</label>
-    <input type="text" placeholder="username" id="username">
+    <input type="text" placeholder="username" id="username" name="username">
     </p>
     <p>
     <label for="password">Password:</label>
-    <input type="password" placeholder="password" id="password">
+    <input type="password" placeholder="password" id="password" name="password">
     </p>
     <p>
-        <input type="color" >
+      <label for="color">choose a color</label>
+        <input type="color" id="color" name="color">
     </p>
     <p>
       <label for="number">Enter number</label>
-    <input id="number" type="number" placeholder="enter a number">
+    <input id="number" type="number" placeholder="enter a number" name="number">
     </p>
     <p>
-      <label for="time">Date of Birth</label>
-    <input type="time" id="time">
+      <label for="date">Date of Birth</label>
+    <input type="date" id="date" name="Dot">
     </p>
     <p>
     <label for="mark">you can check and uncheck me!</label>
     <input type="checkbox" id="mark">
     </p>
-
+    <button>submit</button>
   </form>
+  <hr>
+  <h4>google search:</h4>
+  <form action="https://www.google.com/search">
+  <label for="search">I'm feeling lucky!</label>
+  <input type="search" name="q" id="search" placeholder="search for somthing!">
+  <button>search!</button>
+</form>
+
+<h4>MDN search:</h4>
+  <form action="https://developer.mozilla.org/en-US/search">
+  <label for="search">I'm feeling lucky!</label>
+  <input type="search" name="q" id="search" placeholder="search for somthing!">
+  <button>search!</button>
+</form>
   </body>
 </html>
