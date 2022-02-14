@@ -216,11 +216,11 @@
     <!-- name atribiute is for when we submit the form the name will be submited -->
     <p>
     <label for="username">User Name:</label>
-    <input type="text" placeholder="username" id="username" name="username">
+    <input type="text" placeholder="username" id="username" name="username" required minlength="5" maxlength="15"> 
     </p>
     <p>
     <label for="password">Password:</label>
-    <input type="password" placeholder="password" id="password" name="password">
+    <input type="password" placeholder="password" id="password" name="password" required minlength="6" maxlength="20">
     </p>
     <p>
       <label for="color">choose a color</label>
@@ -228,16 +228,49 @@
     </p>
     <p>
       <label for="number">Enter number</label>
-    <input id="number" type="number" placeholder="enter a number" name="number">
+    <input id="number" type="number" placeholder="enter a number" name="number" min="1" max="999" step="2">
     </p>
     <p>
       <label for="date">Date of Birth</label>
     <input type="date" id="date" name="Dot">
     </p>
     <p>
+    <input type="checkbox" id="mark" name="useless">
     <label for="mark">you can check and uncheck me!</label>
-    <input type="checkbox" id="mark">
     </p>
+    <p>
+      <input type="checkbox" id="agree" name="agree_tos" >
+      <label for="agree">I agree to everything!</label>
+      </p>
+      <p>
+        <input type="checkbox" id="adds" name="adds" checked>
+        <label for="adds">I would like to recive bulshit adds and install all toollbars</label>
+        </p>
+        <p>
+
+          <label for="cheese">cheese</label>
+          <input type="radio"  name="food_choice" id="cheese" value="cheese">
+          <label for="meat">meat</label>
+          <input type="radio"  name="food_choice" id="meat" value="meat">
+          <label for="sushi">sushi</label>
+          <input type="radio"  name="food_choice" id="sushi" value="sushi">  
+          
+        </p>
+        <p>
+          <label for="pet">select favorite pet</label>
+          <select name="pet" id="pet">
+            <option value="">--please select one--</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Hater">I hate animals</option>
+          </select>
+
+        </p>
+        <p>
+          <label for="requests">Any special requests?</label>
+          <br>
+          <textarea name="req" id="requests" cols="30" rows="10" placeholder="Type anything"></textarea>
+        </p>
     <button>submit</button>
   </form>
   <hr>
@@ -245,14 +278,22 @@
   <form action="https://www.google.com/search">
   <label for="search">I'm feeling lucky!</label>
   <input type="search" name="q" id="search" placeholder="search for somthing!">
-  <button>search!</button>
+  <button>search google!</button>
 </form>
 
 <h4>MDN search:</h4>
   <form action="https://developer.mozilla.org/en-US/search">
   <label for="search">I'm feeling lucky!</label>
   <input type="search" name="q" id="search" placeholder="search for somthing!">
-  <button>search!</button>
+  <button>search MDN!</button>
+</form>
+
+
+<h4>Youtube search:</h4>
+  <form action="https://www.youtube.com/results">
+  <label for="search">I'm feeling lucky!</label>
+  <input type="search" name="search_query" id="search" placeholder="search for somthing!">
+  <button>search youtube!</button>
 </form>
   </body>
 </html>
