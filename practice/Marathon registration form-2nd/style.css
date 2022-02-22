@@ -1,0 +1,21 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h1 {
+  font-family: arial;
+  font-weight: normal;
+  width: 40%;
+  text-align: center;
+  text-decoration: overline underline;
+  color: rgb(88, 80, 201);
+}
+body {
+  background-color: aqua;
+}
+a {
+  text-decoration: none;
+}
+button {
+  color: red;
+  background-color: rgb(30, 255, 0);
+}

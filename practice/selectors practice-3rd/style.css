@@ -1,0 +1,82 @@
+body {
+  background-color: #f1faee;
+}
+nav input {
+  margin-left: 5px;
+  border-style: solid;
+  border-color: #1d3557;
+  border-radius: 20%;
+}
+h1,
+h2 {
+  color: #1d3557;
+}
+button {
+  background-color: #a8dadc;
+}
+button:hover {
+  background-color: #e63946;
+  color: #f1faee;
+}
+button:active {
+  background-color: green;
+}
+#signup {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+span {
+  color: #457b9d;
+}
+
+.post h2 span {
+  background-color: #e94552;
+  color: #f1faee;
+  padding: 5px;
+  border-radius: 10px 100px/120px;
+  border-style: solid;
+  border-color: #1d3557;
+}
+li a {
+  color: blue;
+  font-size: 20px;
+}
+li a:hover {
+  color: blue;
+  font-size: 20px;
+  background-color: lightgray;
+}
+footer {
+  background-color: #a8dadc;
+  border: dotted;
+  border-color: #1d3557;
+}
+a {
+  color: #457b9d;
+}
+.post a {
+  text-decoration: none;
+}
+.post:nth-of-type(2n-1) {
+  background-color: #dfe8dc;
+}
+.post a:hover {
+  text-decoration: underline;
+}
+.post a:active {
+  background-color: #a8dadc;
+}
+.post h2::first-letter {
+  font-size: 35px;
+}
+#license {
+  text-align: center;
+  font-size: 25px;
+}
+input[type="password"] {
+  color: navy;
+}
+#copy {
+  font-size: 30px;
+  color: black;
+}
