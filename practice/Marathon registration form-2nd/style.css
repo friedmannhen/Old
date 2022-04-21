@@ -1,11 +1,11 @@
 * {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-h1 {
+h1{
+  display: inline;
   font-family: arial;
   font-weight: normal;
-  width: 40%;
-  text-align: center;
+ margin-left: 100px;
   text-decoration: overline underline;
   color: rgb(88, 80, 201);
 }
