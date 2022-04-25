@@ -20,10 +20,10 @@ img:hover {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   z-index: 2;
   position: sticky;
-  top: 0px;
+  top: 5px;
   border-bottom: 2px solid #dddddd;
   padding-bottom: 5px;
   background-color: #ced4da;
@@ -31,21 +31,19 @@ nav {
 #home-button {
   background-image: url(https://cdn3.iconfinder.com/data/icons/miscellaneous-13/512/home-2-512.png);
   background-size: cover;
-  display: inline-block;
+  /* display: inline-block; */
   width: 35px;
   height: 35px;
-  margin-right: 1em;
+  /* margin-right: 1em; */
 }
-#home-button :hover {
-  transform: translateY(100px);
-}
+
 button {
   font-family: "Oswald", sans-serif;
   font-size: 1.2em;
   width: 30%;
   color: #023047;
   padding: 0 0.2rem;
-  margin: 0px 10%;
+  /* margin: 0px 10%; */
   border: 2px solid #023047;
   border-radius: 0.4em;
   transition: transform 0.5s;

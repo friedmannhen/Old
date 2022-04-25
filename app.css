@@ -2,24 +2,25 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
+  height: 90vh;
+  justify-content: center;
   background-color: #151b29;
-  margin: 0px;
 }
 h1 {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   opacity: 10%;
   color: white;
   font-size: 120px;
   transform: rotateZ(-20deg);
+  border: 10px dotted;
 }
 a {
   display: block;
   color: #ffa260;
-  width: 15rem;
+
   text-decoration: none;
   /* border: 2px solid; */
   padding: 1em 1em;
