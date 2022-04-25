@@ -29,14 +29,18 @@ nav {
   background-color: #ced4da;
 }
 #home-button {
+  display: inline-block;
   background-image: url(https://cdn3.iconfinder.com/data/icons/miscellaneous-13/512/home-2-512.png);
   background-size: cover;
   /* display: inline-block; */
   width: 35px;
   height: 35px;
+  transition: transform 0.2s;
   /* margin-right: 1em; */
 }
-
+#home-button:hover {
+  transform: scale(1.2);
+}
 button {
   font-family: "Oswald", sans-serif;
   font-size: 1.2em;
@@ -46,7 +50,7 @@ button {
   /* margin: 0px 10%; */
   border: 2px solid #023047;
   border-radius: 0.4em;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
 }
 
 button:hover {
