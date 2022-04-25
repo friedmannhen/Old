@@ -1,17 +1,42 @@
 body {
   background-color: #ced4da;
+  font-family: "Oswald", sans-serif;
 }
+
 img {
   width: 30%;
   margin: calc(10% / 6);
   box-shadow: 1px 1px 5px #023047;
+  border-radius: 1em;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+img:hover {
+  transform: rotatez(1deg) perspective(1000px) translateZ(100px);
+  box-shadow: 10px 5px 20px #023047;
+  cursor: pointer;
+}
+
+#home-button {
+  background-image: url(https://cdn3.iconfinder.com/data/icons/miscellaneous-13/512/home-2-512.png);
+  background-size: cover;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 1em;
+  transform: translateY(5px);
+}
+#home-button :hover {
+  transform: translateY(100px);
 }
 nav {
+  position: sticky;
+  top: 0px;
   text-transform: uppercase;
   border-bottom: 2px solid #dddddd;
-  width: 30%;
   margin-left: calc(10% / 6);
   padding: 20px 0px;
+  background-color: #ced4da;
 }
 button {
   font-family: "Oswald", sans-serif;
@@ -25,16 +50,12 @@ button {
 }
 
 button:hover {
-  transform: translatey(-2px);
+  transform: translatey(-2px) perspective(1000px) translateZ(100px);
   box-shadow: 1px 1px 8px #023047;
   cursor: pointer;
 }
 
-img {
-  border-radius: 1em;
-  transition: transform 0.5s, box-shadow 0.5s;
-}
-img:hover {
-  transform: rotate(1deg) translatey(10px);
-  box-shadow: 10px 5px 20px #023047;
+footer p {
+  border-top: 2px solid #dddddd;
+  padding: 3em;
 }

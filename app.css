@@ -6,8 +6,16 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: #151b29;
+  margin: 0px;
 }
-
+h1 {
+  z-index: -1;
+  position: absolute;
+  opacity: 10%;
+  color: white;
+  font-size: 120px;
+  transform: rotateZ(-20deg);
+}
 a {
   display: inline-block;
   color: #ffa260;
