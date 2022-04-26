@@ -8,27 +8,30 @@ body {
   justify-content: center;
   background-color: #151b29;
 }
+
 h1 {
+  font-family: "Libre Bodoni", serif;
   z-index: -1;
   position: fixed;
   opacity: 10%;
   color: white;
   font-size: 120px;
   transform: rotateZ(-20deg);
-  border: 10px dotted;
+  border: 10px;
+  border-style: dashed solid;
+  padding: 0.2em;
 }
 a {
+  min-width: fit-content;
   display: block;
   color: #ffa260;
-
   text-decoration: none;
   /* border: 2px solid; */
   padding: 1em 1em;
   font-size: 1em;
   margin-top: 1em;
   border-radius: 1.5em;
-  box-shadow: 0px 0.5em 2em -1em #f1ff5c;
-
+  box-shadow: 0px 0.5em 2em -1em #ffa260;
   transition: border-radius 0.3s, transform 0.3s;
 }
 a::first-letter {
