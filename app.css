@@ -14,7 +14,14 @@ body {
   right: 0;
   bottom: 0;
 }
-
+#arrow-gif {
+  position: fixed;
+  width: 100px;
+  height: 200px;
+  top: 30px;
+  left: 120px;
+  transform: rotatez(130deg);
+}
 /* h1 {
   font-family: "Libre Bodoni", serif;
   z-index: -1;
@@ -76,5 +83,11 @@ a:hover {
 @media (max-width: 900px) {
   #myVideo {
     transform: translateX(500px);
+  }
+  #arrow-gif {
+    width: 80px;
+    height: 80px;
+    top: 60px;
+    left: 40px;
   }
 }

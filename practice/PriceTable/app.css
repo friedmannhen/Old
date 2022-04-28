@@ -183,6 +183,8 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .pricing-plan {
   border-bottom: 1px solid #e1f1ff;
@@ -247,7 +249,7 @@ h1 {
 @media (min-width: 800px) {
   .panel {
     flex-direction: row;
-    margin: 0px;
+    margin: 40px;
   }
   .pricing-plan {
     border-bottom: none;
