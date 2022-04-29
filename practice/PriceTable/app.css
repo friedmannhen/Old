@@ -248,8 +248,10 @@ h1 {
 }
 @media (min-width: 800px) {
   .panel {
+    margin: 0px;
+    padding: 0px;
     flex-direction: row;
-    margin: 40px;
+    transform: scale(0.7);
   }
   .pricing-plan {
     border-bottom: none;

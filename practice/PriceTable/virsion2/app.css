@@ -246,6 +246,7 @@ h1 {
   .panel {
     flex-direction: row;
     margin: 0;
+    transform: scale(0.7);
   }
   .pricing-plan {
     border-bottom: none;
