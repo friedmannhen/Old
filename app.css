@@ -79,3 +79,20 @@ a:hover {
   transform: rotatez(-10deg) scale(1.3);
   cursor: pointer;
 }
+
+#home-button {
+  display: inline-block;
+  background-image: url(https://iconape.com/wp-content/files/wa/66713/svg/hf.svg);
+  background-size: cover;
+  /* display: inline-block; */
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1px;
+  transition: transform 1s;
+  /* margin-right: 1em; */
+}
+#home-button:hover {
+  transform: scale(1.2) rotateZ(-360deg);
+}

@@ -37,16 +37,19 @@ nav {
 
 #home-button {
   display: inline-block;
-  background-image: url(https://cdn3.iconfinder.com/data/icons/miscellaneous-13/512/home-2-512.png);
+  background-image: url(https://iconape.com/wp-content/files/wa/66713/svg/hf.svg);
   background-size: cover;
   /* display: inline-block; */
   width: 35px;
   height: 35px;
-  transition: transform 0.2s;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1px;
+  transition: transform 1s;
   /* margin-right: 1em; */
 }
 #home-button:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotateZ(-360deg);
 }
 button {
   font-family: "Oswald", sans-serif;
