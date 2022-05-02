@@ -14,14 +14,7 @@ body {
   right: 0;
   bottom: 0;
 }
-#arrow-gif {
-  position: fixed;
-  width: 80px;
-  height: 80px;
-  top: 55px;
-  left: 75px;
-  transform: rotatez(-45deg);
-}
+
 /* h1 {
   font-family: "Libre Bodoni", serif;
   z-index: -1;
@@ -68,7 +61,6 @@ a::first-letter {
   font-family: "Libre Bodoni", serif;
   font-size: 1.5em;
   color: white;
-  background-color: black;
   border-radius: 0.1em;
   padding: 0px 4px;
   margin-right: 3px;
@@ -95,4 +87,11 @@ a:hover {
 }
 #home-button:hover {
   transform: scale(1.2) rotateZ(-360deg);
+}
+
+.fa-html5 {
+  color: #e56027;
+}
+.fa-css3 {
+  color: #279fd4;
 }
