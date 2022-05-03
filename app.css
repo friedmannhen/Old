@@ -99,3 +99,8 @@ a:hover {
 .fa-brands {
   --fa-animation-duration: 2s;
 }
+.fa-bootstrap {
+  background: -webkit-linear-gradient(#8454cc, #39196b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
