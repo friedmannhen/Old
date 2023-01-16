@@ -58,45 +58,45 @@ async function bubbleSort() {
 
 }
 
-// sssssssssssssssssssssssssssssssssssssssssssssssss
-function quickSort(arr, start, end) {
-    if (start >= end) {
-        return;
-    }
-    let pivotIndex = partition(arr, start, end);
-    quickSort(arr, start, pivotIndex);
-    quickSort(arr, pivotIndex + 1, end);
-}
+// // sssssssssssssssssssssssssssssssssssssssssssssssss
+// function quickSort(arr, start, end) {
+//     if (start >= end) {
+//         return;
+//     }
+//     let pivotIndex = partition(arr, start, end);
+//     quickSort(arr, start, pivotIndex);
+//     quickSort(arr, pivotIndex + 1, end);
+// }
 
-function partition(arr, start, end) {
-    let pivotIndex = start;
-    let pivotValue = arr[end];
-    for (let i = start; i < end; i++) {
-        if (arr[i] < pivotValue) {
-            swap(arr, i, pivotIndex);
-            pivotIndex++;
-        }
-    }
-    swap(arr, pivotIndex, end);
-    return pivotIndex;
-}
+// function partition(arr, start, end) {
+//     let pivotIndex = start;
+//     let pivotValue = arr[end];
+//     for (let i = start; i < end; i++) {
+//         if (arr[i] < pivotValue) {
+//             swap(arr, i, pivotIndex);
+//             pivotIndex++;
+//         }
+//     }
+//     swap(arr, pivotIndex, end);
+//     return pivotIndex;
+// }
 
-function swap(arr, i, j) {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-    // update the height of the corresponding bar
-    bars[i].style.height = `${arr[i]}px`;
-    bars[j].style.height = `${arr[j]}px`;
-    // add active class to the bars being compared
-    bars[i].classList.add('active');
-    bars[j].classList.add('active');
-    // remove active class after a delay
-    setTimeout(() => {
-        bars[i].classList.remove('active');
-        bars[j].classList.remove('active');
-    }, 500); // you can adjust the delay time here
-}
+// function swap(arr, i, j) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     // update the height of the corresponding bar
+//     bars[i].style.height = `${arr[i]}px`;
+//     bars[j].style.height = `${arr[j]}px`;
+//     // add active class to the bars being compared
+//     bars[i].classList.add('active');
+//     bars[j].classList.add('active');
+//     // remove active class after a delay
+//     setTimeout(() => {
+//         bars[i].classList.remove('active');
+//         bars[j].classList.remove('active');
+//     }, 500); // you can adjust the delay time here
+// }
 
 
 
@@ -115,8 +115,8 @@ function runSort() {
             bubbleSort();
             break;
         case 'quick':
-            // alert("Not yet implemented!");
-            quickSort(array, 0, array.length - 1);
+            alert("Not yet implemented!");
+            // quickSort(array, 0, array.length - 1);
             break;
     }
 }
