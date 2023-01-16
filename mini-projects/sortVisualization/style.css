@@ -1,0 +1,140 @@
+#start, #stop {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#start {
+  background-color: #4CAF50; /* green */
+  color: #fff;
+}
+
+#stop {
+  background-color: #f44336; /* red */
+  color: #fff;
+}
+
+#start:disabled {
+  background-color: #4caf4f5e; /* green */
+}
+
+#stop:disabled {
+  background-color: #f4433670; /* red */
+  color: #fff;
+}
+
+#start:hover, #stop:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+input[type="number"] ,select{
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+input[type="number"]:focus  {
+  border-color: #3498db; /* blue */
+  outline: none;
+  box-shadow: 0px 0px 10px 0px rgba(52,152,219,0.5);
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #container {
+    display: flex;
+    align-items: flex-end;
+    height: 50vh;
+    justify-content: center;
+    background-color: #1b345a;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .bar {
+    min-width: 10px;
+    height: 0;
+    margin-right: 2px;
+    transition: height 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 5px -4px 2px rgb(0, 0, 0);
+
+  }
+  
+  .active {
+    background-color: #e74c3c;
+
+  }
+
+  .fixed {
+    
+    background-color: hsl(60, 100%, 77%);
+
+  }
+  .pivot{
+    background-color: hsl(60, 100%, 77%);
+  }
+ .done{
+  transition: all 0.15s ease-in;
+  background-color: #2ecc71;
+  transform: translatey(-50px);
+ }
+
+
+#home-button {
+  background-image: url(https://iconape.com/wp-content/files/wa/66713/svg/hf.svg);
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  transition: transform 1s;
+  position: absolute;
+}
+#home-button:hover {
+  transform: scale(1.2) rotateZ(-360deg);
+}
+ 
+.speed-cont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(20px);
+  color:white;
+}
+#scroll-input{
+  width:400px;
+}
+#scroll-value{
+  width:100px
+}

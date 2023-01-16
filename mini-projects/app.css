@@ -62,7 +62,6 @@ a::first-letter {
   font-size: 1.5em;
   color: white;
   border-radius: 0.1em;
-  padding: 0px 4px;
   margin-right: 3px;
 }
 a:hover {

@@ -199,7 +199,7 @@ h1 {
   width: 100px;
   height: 600px;
   transform-origin: top left;
-  animation: animate 6s linear infinite;
+  animation: animate 4s linear infinite;
 }
 .pricing-plan:hover:after {
   content: " ";
@@ -210,8 +210,8 @@ h1 {
   width: 100px;
   height: 600px;
   transform-origin: top left;
-  animation: animate 6s linear infinite;
-  animation-delay: -3s;
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 .content{
   position: relative;
