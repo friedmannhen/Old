@@ -10,7 +10,6 @@ body {
   border-radius: 5px;
   margin-right: 10px;
   outline: none;
-  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
@@ -35,8 +34,9 @@ body {
   color: #fff;
 }
 
-#start:hover,
-#stop:hover {
+#start:hover:not(:disabled),
+#stop:hover:not(:disabled){
+  cursor: pointer;
   transform: scale(1.04);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
