@@ -118,6 +118,9 @@ input[type="number"]:focus {
 #home-button {
   background-image: url(https://iconape.com/wp-content/files/wa/66713/svg/hf.svg);
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 35px;
   height: 35px;
   background-color: white;
@@ -165,10 +168,5 @@ form{
   #size , #sortType{
     width: 130%;
     margin: 10px 0 10px 0px;
-  }
-  #home-button{
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
