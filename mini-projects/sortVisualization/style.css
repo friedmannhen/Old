@@ -100,10 +100,10 @@ input[type="number"]:focus {
 }
 
 .active {
-  background-color: #ff2c2c;
+  background-color: #ff922c;
 }
 .prime{
-  background-color: #e74c3c
+  background-color: #ff1900
 
 }
 .fixed {
