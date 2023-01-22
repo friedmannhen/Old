@@ -37,9 +37,14 @@ async function bubbleSort() {
     let length = array.length;
     for (i; i < length; i++) {
         for (j; j < length - i - 1; j++) {
-            bars[j].classList.add('active');
-            bars[j + 1].classList.add('active');
-
+            if (array[j] > array[j + 1]) {
+                bars[j].classList.add('prime');
+                bars[j + 1].classList.add('active');
+            }
+            else {
+                bars[j].classList.add('active');
+                bars[j + 1].classList.add('prime');
+            }
             if (stop) return;
 
             await new Promise(resolve => setTimeout(resolve, 2000 - scrollInput.value));
@@ -49,6 +54,8 @@ async function bubbleSort() {
             }
             bars[j].classList.remove('active');
             bars[j + 1].classList.remove('active');
+            bars[j].classList.remove('prime');
+            bars[j + 1].classList.remove('prime');
         }
         bars[j].classList.add('fixed');
         j = 0;
