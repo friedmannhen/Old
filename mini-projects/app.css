@@ -94,7 +94,9 @@ a:hover {
 .fa-css3 {
   color: #279fd4;
 }
-
+.fa-js{
+  color: #c6b519;
+}
 .fa-brands {
   --fa-animation-duration: 2s;
 }
