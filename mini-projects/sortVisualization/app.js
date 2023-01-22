@@ -23,7 +23,7 @@ function createBars() {
     bars = array.map(value => {
         let bar = document.createElement('div');
         bar.classList.add('bar');
-        bar.style.height = `${value + 10}px`;
+        bar.style.height = `${value + 1}px`;
         bar.style.width = `${80 / size}%`;
         container.appendChild(bar);
         return bar;
@@ -118,6 +118,14 @@ function runSort() {
             alert("Not yet implemented!");
             // quickSort(array, 0, array.length - 1);
             break;
+    }
+}
+
+document.getElementById('size').oninput = function () {
+    var max = parseInt(this.max);
+
+    if (parseInt(this.value) > max) {
+        this.value = max;
     }
 }
 
