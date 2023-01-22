@@ -14,7 +14,8 @@ let bars = [];
 let reset = false;
 function createBars() {
     // clear the container
-    container.innerHTML = '';
+    container.innerHTML = ``;
+
     // get the size of the array from the input
     let size = sizeInput.value;
     // generate a new array with random values

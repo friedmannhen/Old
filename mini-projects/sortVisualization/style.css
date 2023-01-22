@@ -82,9 +82,7 @@ input[type="number"]:focus {
   align-items: flex-end;
   height: 50vh;
   justify-content: center;
-  background-color: #1b345a;
-  padding: 10px;
-  border-radius: 10px;
+ 
 }
 
 .bar {
@@ -129,11 +127,14 @@ input[type="number"]:focus {
 #home-button:hover {
   transform: scale(1.2) rotateZ(-360deg);
 }
-
+.main-area{
+  background-color: #1b345a;
+  padding: 10px;
+  border-radius: 10px;
+}
 .speed-cont {
   top:0;
-  width: 80%;
-  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
