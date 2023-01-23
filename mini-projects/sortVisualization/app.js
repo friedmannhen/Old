@@ -131,9 +131,12 @@ function runSort() {
 
 document.getElementById('size').oninput = function () {
     var max = parseInt(this.max);
-
+    var min = parseInt(this.min);
     if (parseInt(this.value) > max) {
         this.value = max;
+    }
+    if (parseInt(this.value) < min) {
+        this.value = min;
     }
 }
 
