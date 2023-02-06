@@ -65,7 +65,56 @@ async function bubbleSort() {
 
 
 }
+async function SelectionSort() {
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    let length = array.length;
+    for (i; i < length; i++) {
+        for (j = i + 1; j < length; j++) {
+            bars[i].classList.add('prime');
+            bars[j].classList.add('active');
+            if (stop) return;
 
+            await new Promise(resolve => setTimeout(resolve, 2000 - scrollInput.value));
+            if (array[i] > array[j]) {
+                [array[i], array[j]] = [array[j], array[i]];
+                [bars[i].style.height, bars[j].style.height] = [bars[j].style.height, bars[i].style.height];
+            }
+            bars[j].classList.remove('active');
+        }
+        bars[i].classList.add('fixed');
+    }
+    done();
+    stopButton.disabled = true;
+
+}
+async function SelectionSortRevert() {
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    let length = array.length;
+    for (i = 0; i < length; i++) {
+        for (j = 0; j < length; j++) {
+            bars[i].classList.add('prime');
+            bars[j].classList.add('active');
+            if (stop) return;
+
+            await new Promise(resolve => setTimeout(resolve, 2000 - scrollInput.value));
+
+            if (array[i] > array[j]) {
+                [array[i], array[j]] = [array[j], array[i]];
+                [bars[i].style.height, bars[j].style.height] = [bars[j].style.height, bars[i].style.height];
+            }
+            bars[j].classList.remove('active');
+            bars[i].classList.remove('prime');
+
+
+        }
+
+    }
+    done();
+    stopButton.disabled = true;
+
+}
 // // sssssssssssssssssssssssssssssssssssssssssssssssss
 // function quickSort(arr, start, end) {
 //     if (start >= end) {
@@ -122,10 +171,19 @@ function runSort() {
         case 'bubble':
             bubbleSort();
             break;
+        case 'select':
+            SelectionSort();
+
+            break;
+        case 'selectR':
+            SelectionSortRevert();
+
+            break;
         case 'quick':
             alert("Not yet implemented!");
             // quickSort(array, 0, array.length - 1);
             break;
+
     }
 }
 
