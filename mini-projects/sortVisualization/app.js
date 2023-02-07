@@ -115,6 +115,31 @@ async function SelectionSortRevert() {
     stopButton.disabled = true;
 
 }
+
+async function SelectionSortRevertV2() {
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    let length = array.length;
+    let firstRunFlag = false;
+    for (i = 0; i < length; i++) {
+        for (j = 0; j < (firstRunFlag === false ? length : i); j++) {
+            bars[i].classList.add('prime');
+            bars[j].classList.add('active');
+            if (stop) return;
+            await new Promise(resolve => setTimeout(resolve, 2000 - scrollInput.value));
+            if (array[i] > array[j]) {
+                [array[i], array[j]] = [array[j], array[i]];
+                [bars[i].style.height, bars[j].style.height] = [bars[j].style.height, bars[i].style.height];
+            }
+            bars[j].classList.remove('active');
+            bars[i].classList.remove('prime');
+        }
+        firstRunFlag = true;
+    }
+    done();
+    stopButton.disabled = true;
+
+}
 // // sssssssssssssssssssssssssssssssssssssssssssssssss
 // function quickSort(arr, start, end) {
 //     if (start >= end) {
@@ -171,14 +196,19 @@ function runSort() {
         case 'bubble':
             bubbleSort();
             break;
+
         case 'select':
             SelectionSort();
-
             break;
+
         case 'selectR':
             SelectionSortRevert();
-
             break;
+
+        case 'selectRv2':
+            SelectionSortRevertV2();
+            break;
+
         case 'quick':
             alert("Not yet implemented!");
             // quickSort(array, 0, array.length - 1);
