@@ -39,7 +39,7 @@ function generateNumber() {
   var generateButton = document.querySelector("button");
   generateButton.disabled = true;
 
-  // Start displaying random numbers for 5 seconds
+  // Start displaying random numbers 
   var startTime = Date.now();
   var interval = setInterval(function () {
     // Generate a new random number
@@ -97,5 +97,4 @@ function resetGame() {
   // Clear the picked numbers list
   var numberList = document.getElementById("number-list");
   numberList.innerHTML = "";
-  document.getElementById("rules").style.display = "block";
 }
