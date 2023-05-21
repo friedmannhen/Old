@@ -53,7 +53,7 @@ function generateNumber() {
     // Display the number
     var numberDisplay = document.getElementById("number-display");
     numberDisplay.textContent = number;
-  }, 100); // Display a new number every 0.1 second
+  }, 80); // Display a new number every 0.1 second
 
   // Stop displaying random numbers after 5 seconds
   setTimeout(function () {
