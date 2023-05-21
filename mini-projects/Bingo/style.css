@@ -46,6 +46,7 @@ body {
   align-items: center;
   height: 100vh;
   font-size: 20em;
+  padding-top: 100px;
 }
 .reset {
   position: absolute;
@@ -82,8 +83,8 @@ body {
   justify-content: left;
   flex-wrap: wrap;
   position: absolute;
-  top: 110px;
-  left: 5px;
+  top: 130px;
+  left: 25px;
   width: 34%;
 }
 .top-cont {
