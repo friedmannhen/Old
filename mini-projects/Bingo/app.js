@@ -79,7 +79,7 @@ function generateNumber() {
     roll.classList.remove("roll-btn-hide");
     roll.classList.add("roll-btn-show");
     numberDisplay.classList.toggle("show");
-  }, 000);
+  }, 5000);
 }
 
 // Reset the game
