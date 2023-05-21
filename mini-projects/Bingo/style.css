@@ -44,6 +44,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   font-size: 20em;
 }
 .reset {
@@ -56,14 +57,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   color: #10478c;
   background-color: #ffe00f;
   border-radius: 50%;
   border: 2px solid #10478c;
   width: 600px;
   height: 600px;
-  margin-bottom: 10px;
   z-index: 10;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -155,8 +154,8 @@ button {
     align-items: center;
 
   position: absolute;
-  top: 50%;
-  left: 42%;
+  left: 50px;
+  bottom: 50px;
   z-index: 12;
 }
 #max {
@@ -165,45 +164,7 @@ button {
   border-radius: 5px;
   border: 1px solid grey;
 }
-button {
-  position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    margin-top: -12px;
-    width: 24px;
-    height: 24px;
-    border: 2px solid;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.5s;
-    animation: 0.8s linear infinite rotate;
-  }
-  &.sending {
-    pointer-events: none;
-    cursor: not-allowed;
-
-    &:before {
-      transition-delay: 0.5s;
-      transition-duration: 1s;
-      opacity: 1;
-    }
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* background */
 
 body .air {
@@ -260,15 +221,77 @@ body .air.air4 {
     background-position-x: -1000px;
   }
 }
-/* New button */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+/* circle animatio  */
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  cursor: pointer;
-  width: fit-content;
-  z-index: 100;
+#number-display.show::before  {
+  content: '';
+  border: 15px solid #DB1A1B;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-radius: 50%;
+  width: 630px;
+  height: 630px;
+  position: absolute;
+  -moz-animation: spinoffPulse 3s infinite ease-in-out;
+  -webkit-animation: spinoffPulse 3s infinite ease-in-out;
+  }
+  #number-display.show::after {
+  content: '';
+  border: 15px solid #10478C;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  width: 665px;
+  height: 665px;
+  position: absolute;
+  -moz-animation: spinoffPulse 4s infinite linear;
+  -webkit-animation: spinoffPulse 4s infinite linear;
+  
+  }
+  
+  
+  @-moz-keyframes spinPulse {
+      0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
+    50% { -moz-transform:rotate(145deg); opacity:1; }
+    100% { -moz-transform:rotate(-320deg); opacity:0; }
+  }
+  @-moz-keyframes spinoffPulse {
+      0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(360deg);  }
+  }
+  @-webkit-keyframes spinPulse {
+      0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c; }
+    50% { -webkit-transform:rotate(145deg); opacity:1;}
+    100% { -webkit-transform:rotate(-320deg); opacity:0; }
+  }
+  @-webkit-keyframes spinoffPulse {
+      0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(360deg); }
+  }
+  @-moz-keyframes rotatecircle {
+      0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(-360deg); }
+  }
+  
+  @-webkit-keyframes rotatecircle {
+      0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(-360deg); }
+  }
+
+  /* number list media querys */
+  @media  screen and (min-width: 2000px) {
+    .number {
+      width: 80px;
+      height:80px;
+      font-size: 50px;
+    }
+  }
+
+  @media  screen and (max-width: 600px) {
+    .number {
+      width: 30px;
+      height:30px;
+      font-size: 18px;
+}
 }

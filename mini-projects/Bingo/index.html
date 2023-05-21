@@ -16,20 +16,21 @@
         <img class="It_logo" src="images/It_Logo.png">
     </div>
     <div id="rules">
-        <input type="range" id="max"  min="1" max="100"  oninput="this.nextElementSibling.value = this.value" placeholder="Max Number" />
+        <input type="range" id="max" min="1" max="100" oninput="this.nextElementSibling.value = this.value"
+            placeholder="Max Number" />
         <output>24</output>
         <button onclick="startGame()" class="btn btn-warning btn-lg btn-block">Start</button>
-    </div div>
+    </div>
     <div class="app-cont">
-        <div id="number-display"></div>
-        <div id="number-list"></div>
-    </div>
-    <div class="container">
-        <img src="images/buzzer.png" id="buzzer" onclick="generateNumber()" />
-        <!-- <div class="btn"><a href="#" onclick="generateNumber()" id="roll">Generate Number</a></div> -->
-    </div>
-    <button type="submit" onclick="resetGame()" class="btn btn-outline-primary btn-lg btn-block reset">Reset</button>
+        <div class="outerCircle"></div>
+        <div class="innerCircle"></div>
+        <div id="number-display">
 
+        </div>
+        <div id="number-list"></div>
+        <img src="images/buzzer.png" id="buzzer" onclick="generateNumber()" />
+    </div>
+    <button onclick="resetGame()" class="btn btn-outline-primary btn-lg btn-block reset">Reset</button>
     <div class='air air1'></div>
     <div class='air air2'></div>
     <div class='air air3'></div>

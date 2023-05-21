@@ -1,7 +1,9 @@
 // Array to store picked numbers
 var pickedNumbers = [];
 var MaxNumber = 0;
-var roll = document.querySelector(".container");
+var numberDisplay = document.getElementById("number-display");
+
+var roll = document.querySelector("#buzzer");
 roll.classList.add("roll-btn-hide");
 function startGame() {
   MaxNumber = document.getElementById("max").value;
@@ -18,7 +20,7 @@ function startGame() {
   roll.classList.add("roll-btn-show");
 }
 
-// Generate a random number between 1 and 100
+// Generate a random number between 1 and MaxNumber
 function generateRandomNumber() {
   return Math.floor(Math.random() * MaxNumber) + 1;
 }
@@ -27,13 +29,10 @@ function generateRandomNumber() {
 function generateNumber() {
   roll.classList.remove("roll-btn-show");
   roll.classList.add("roll-btn-hide");
-    
+  numberDisplay.classList.toggle("show");
   document.querySelector(".reset").disabled = true;
   // Check if all numbers have been picked
-  if (pickedNumbers.length === 100) {
-    alert("All numbers have been picked!");
-    return;
-  }
+
 
   // Disable generate number button during animation
   var generateButton = document.querySelector("button");
@@ -49,17 +48,19 @@ function generateNumber() {
     if (pickedNumbers.includes(number)) {
       return;
     }
-
     // Display the number
-    var numberDisplay = document.getElementById("number-display");
     numberDisplay.textContent = number;
-  }, 80); // Display a new number every 0.1 second
+  }, 70); // Display a new number every x second
 
   // Stop displaying random numbers after 5 seconds
   setTimeout(function () {
     clearInterval(interval);
 
     // Generate a new number
+    if (pickedNumbers.length === MaxNumber - 1) {
+      alert("All numbers have been picked!");
+      return;
+    }
     var number = generateRandomNumber();
 
     // Check if the number has already been picked
@@ -69,7 +70,6 @@ function generateNumber() {
     }
     // Add the number to the picked numbers array
     pickedNumbers.push(number);
-    var numberDisplay = document.getElementById("number-display");
     numberDisplay.textContent = number;
     var pickedNumber = document.querySelectorAll(".number");
     pickedNumber[number - 1].classList.add("selected");
@@ -78,7 +78,8 @@ function generateNumber() {
     document.querySelector(".reset").disabled = false;
     roll.classList.remove("roll-btn-hide");
     roll.classList.add("roll-btn-show");
-  }, 5000);
+    numberDisplay.classList.toggle("show");
+  }, 000);
 }
 
 // Reset the game
@@ -91,7 +92,6 @@ function resetGame() {
   pickedNumbers = [];
 
   // Clear the number display
-  var numberDisplay = document.getElementById("number-display");
   numberDisplay.textContent = "";
 
   // Clear the picked numbers list
