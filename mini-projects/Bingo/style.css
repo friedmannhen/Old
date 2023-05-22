@@ -1,5 +1,4 @@
 body {
-  position: relative;
   height: 100vh;
   overflow: hidden;
   text-align: center;
@@ -44,18 +43,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-size: 20em;
-  padding-top: 100px;
-}
-.reset {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  flex-wrap: wrap;
 }
 #number-display {
   font-weight: bold;
   display: flex;
+  font-size: 20em;
   justify-content: center;
   align-items: center;
   color: #10478c;
@@ -64,55 +57,20 @@ body {
   border: 2px solid #10478c;
   width: 600px;
   height: 600px;
-  z-index: 10;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 20px 10px inset;
 }
 
-.roll-btn-show {
-  transform: translateY(0px);
-  transition: 0.5s ease-in-out;
-}
-.roll-btn-hide {
-  transform: translateY(-200px) scale(0);
-  transition: 0.5s ease-in-out;
-}
 #number-list {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  position: absolute;
-  top: 130px;
-  left: 25px;
-  width: 34%;
-}
-.top-cont {
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-img {
-  width: 200px;
-  height: 80px;
-  margin: 20px;
-}
-.title_img {
-  width: 700px;
-}
-.Iscar_Logo {
-}
-.It_logo {
-  height: 120px;
-  width: 150px;
+  padding-left: 20px;
 }
 .number {
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: 10%;
   display: block;
   background-color: #eee;
   border: 1px solid #ccc;
@@ -133,15 +91,53 @@ img {
   background-color: greenyellow;
 }
 
+.roll-btn-show {
+  transform: translateY(0px);
+  transition: 0.5s ease-in-out;
+}
+.roll-btn-hide {
+  transform: translateY(-200px) scale(0);
+  transition: 0.5s ease-in-out;
+}
+.top-cont {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  margin: 20px;
+}
+img {
+  width: 200px;
+  height: 80px;
+}
+.reset {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.title_img {
+  width: 700px;
+}
+.Iscar_Logo {
+}
+.It_logo {
+  width: 150px;
+}
 button {
   font-size: 16px;
   padding: 10px 20px;
   margin: 0 10px;
 }
+.numAndBut{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #buzzer {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  cursor: pointer;
 }
 #buzzer:active {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -149,10 +145,10 @@ button {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 #rules {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
 
   position: absolute;
   left: 50px;
@@ -225,9 +221,9 @@ body .air.air4 {
 
 /* circle animatio  */
 
-#number-display.show::before  {
-  content: '';
-  border: 15px solid #DB1A1B;
+#number-display.show::before {
+  content: "";
+  border: 15px solid #db1a1b;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
   border-radius: 50%;
@@ -236,10 +232,10 @@ body .air.air4 {
   position: absolute;
   -moz-animation: spinoffPulse 3s infinite ease-in-out;
   -webkit-animation: spinoffPulse 3s infinite ease-in-out;
-  }
-  #number-display.show::after {
-  content: '';
-  border: 15px solid #10478C;
+}
+#number-display.show::after {
+  content: "";
+  border: 15px solid #10478c;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-radius: 50%;
@@ -248,51 +244,99 @@ body .air.air4 {
   position: absolute;
   -moz-animation: spinoffPulse 4s infinite linear;
   -webkit-animation: spinoffPulse 4s infinite linear;
-  
-  }
-  
-  
-  @-moz-keyframes spinPulse {
-      0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
-    50% { -moz-transform:rotate(145deg); opacity:1; }
-    100% { -moz-transform:rotate(-320deg); opacity:0; }
-  }
-  @-moz-keyframes spinoffPulse {
-      0% { -moz-transform:rotate(0deg); }
-    100% { -moz-transform:rotate(360deg);  }
-  }
-  @-webkit-keyframes spinPulse {
-      0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c; }
-    50% { -webkit-transform:rotate(145deg); opacity:1;}
-    100% { -webkit-transform:rotate(-320deg); opacity:0; }
-  }
-  @-webkit-keyframes spinoffPulse {
-      0% { -webkit-transform:rotate(0deg); }
-    100% { -webkit-transform:rotate(360deg); }
-  }
-  @-moz-keyframes rotatecircle {
-      0% { -moz-transform:rotate(0deg); }
-    100% { -moz-transform:rotate(-360deg); }
-  }
-  
-  @-webkit-keyframes rotatecircle {
-      0% { -webkit-transform:rotate(0deg); }
-  100% { -webkit-transform:rotate(-360deg); }
-  }
-
-  /* number list media querys */
-  @media  screen and (min-width: 2000px) {
-    .number {
-      width: 80px;
-      height:80px;
-      font-size: 50px;
-    }
-  }
-
-  @media  screen and (max-width: 600px) {
-    .number {
-      width: 30px;
-      height:30px;
-      font-size: 18px;
 }
+
+@-moz-keyframes spinPulse {
+  0% {
+    -moz-transform: rotate(160deg);
+    opacity: 0;
+    box-shadow: 0 0 1px #bdd73c;
+  }
+  50% {
+    -moz-transform: rotate(145deg);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: rotate(-320deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes spinoffPulse {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinPulse {
+  0% {
+    -webkit-transform: rotate(160deg);
+    opacity: 0;
+    box-shadow: 0 0 1px #bdd73c;
+  }
+  50% {
+    -webkit-transform: rotate(145deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-320deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spinoffPulse {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotatecircle {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotatecircle {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+/* number list media querys */
+@media screen and (min-width: 2000px) {
+  .number {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .number {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+/* cursor animation */
+.circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to top left, #10478c, #00A2FE);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  pointer-events: none;
+  z-index: 10;
 }

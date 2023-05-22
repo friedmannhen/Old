@@ -29,7 +29,7 @@ function generateRandomNumber() {
 function generateNumber() {
   roll.classList.remove("roll-btn-show");
   roll.classList.add("roll-btn-hide");
-  numberDisplay.classList.toggle("show");
+  numberDisplay.classList.add("show");
   document.querySelector(".reset").disabled = true;
   // Check if all numbers have been picked
 
@@ -78,7 +78,7 @@ function generateNumber() {
     document.querySelector(".reset").disabled = false;
     roll.classList.remove("roll-btn-hide");
     roll.classList.add("roll-btn-show");
-    numberDisplay.classList.toggle("show");
+    numberDisplay.classList.remove("show");
   }, 5000);
 }
 
@@ -98,3 +98,28 @@ function resetGame() {
   var numberList = document.getElementById("number-list");
   numberList.innerHTML = "";
 }
+
+
+// cursour animation 
+
+// create instance of kinet with custom settings
+var kinet = new Kinet({
+  acceleration: 0.09,
+  friction: 0.15,
+  names: ["x", "y"],
+});
+
+// select circle element
+var circle = document.getElementById('circle');
+
+// set handler on kinet tick event
+kinet.on('tick', function(instances) {
+  circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
+});
+
+// call kinet animate method on mousemove
+document.addEventListener('mousemove', function (event) {
+  kinet.animate('x', event.clientX - window.innerWidth/2);
+  kinet.animate('y', event.clientY - window.innerHeight/2-20);
+});
+
