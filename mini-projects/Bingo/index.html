@@ -7,11 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-<script src="./kinet-master/dist/kinet.js"></script>
+    <script src="https://kit.fontawesome.com/c6ebfc089c.js" crossorigin="anonymous"></script>
+
+    <script src="./kinet-master/dist/kinet.js"></script>
 
 </head>
 
 <body>
+    <i class="fa-light fa-volume" style="position: absolute; top:10px;right:10px"></i>
+    <i class="fa-light fa-volume-slash"></i>
     <div class="top-cont">
         <img class="Iscar_Logo" src="images/Iscar_Logo.png">
         <img class="title_img" src="images/MiddleBingoBanner .png">
@@ -27,7 +31,7 @@
         <div class="col">
             <div id="number-list"></div>
         </div>
-        <div class="col numAndBut" >
+        <div class="col numAndBut">
             <div id="number-display"></div>
             <img src="images/buzzer.png" id="buzzer" onclick="generateNumber()" />
         </div>
@@ -40,6 +44,10 @@
     <div class='air air2'></div>
     <div class='air air3'></div>
     <div class='air air4'></div>
+    <audio id="audioDrums" src="/mini-projects/Bingo/Sound/Drums.mp3"></audio>
+    <audio id="audioPop" src="/mini-projects/Bingo/Sound/pop.mp3"></audio>
+    <a><i id="mute" class="fa-light fa-volume" onclick="mute();"></i></a>
 </body>
 <script src="app.js"></script>
+
 </html>

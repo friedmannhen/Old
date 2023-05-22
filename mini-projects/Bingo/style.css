@@ -110,7 +110,7 @@ img {
   height: 80px;
 }
 .reset {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 10px;
 }
@@ -339,4 +339,17 @@ body .air.air4 {
   margin: -20px 0 0 -20px;
   pointer-events: none;
   z-index: 10;
+}
+
+/* mute button */
+
+#mute {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transition:  transform 0.3s;
+}
+#mute:hover {
+  transform: scale(1.3);
 }
