@@ -126,14 +126,14 @@ document.addEventListener("mousemove", function (event) {
   kinet.animate("y", event.clientY - window.innerHeight / 2 - 20);
 });
 
-var mutebtn = document.getElementById("mute");
-function mute() {
-  drums.mute = !drums.mute;
-  pop.mute = !pop.mute;
-  if (drums.mute && pop.mute) {
-    btn.innerHTML = '<i class="fa-solid fa-video "></i>';
-  } else {
-    video.pause();
-    btn.innerHTML = '<i class="fa-solid fa-video-slash "></i>';
-  }
-}
+// var mutebtn = document.getElementById("mute");
+// function mute() {
+//   drums.mute = !drums.mute;
+//   pop.mute = !pop.mute;
+//   if (drums.mute && pop.mute) {
+//     btn.innerHTML = '<i class="fa-solid fa-video "></i>';
+//   } else {
+//     video.pause();
+//     btn.innerHTML = '<i class="fa-solid fa-video-slash "></i>';
+//   }
+// }
