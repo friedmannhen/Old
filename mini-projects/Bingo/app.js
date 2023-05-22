@@ -2,14 +2,13 @@
 var pickedNumbers = [];
 var MaxNumber = 0;
 var numberDisplay = document.getElementById("number-display");
-var drums = document.getElementById("audioDrums");
-var pop = document.getElementById("audioPop");
 
 var roll = document.querySelector("#buzzer");
 roll.classList.add("roll-btn-hide");
 function startGame() {
   MaxNumber = document.getElementById("max").value;
   for (let i = 1; i < parseInt(MaxNumber) + 1; i++) {
+    console.log(i);
     var numberList = document.getElementById("number-list");
     var numberElement = document.createElement("div");
     numberElement.className = "number";
@@ -34,16 +33,17 @@ function generateNumber() {
   document.querySelector(".reset").disabled = true;
   // Check if all numbers have been picked
 
+
   // Disable generate number button during animation
   var generateButton = document.querySelector("button");
   generateButton.disabled = true;
 
-  // Start displaying random numbers
+  // Start displaying random numbers 
   var startTime = Date.now();
   var interval = setInterval(function () {
     // Generate a new random number
     var number = generateRandomNumber();
-    var audio = new Audio("");
+
     // Check if the number has already been picked
     if (pickedNumbers.includes(number)) {
       return;
@@ -51,7 +51,7 @@ function generateNumber() {
     // Display the number
     numberDisplay.textContent = number;
   }, 70); // Display a new number every x second
-  drums.play();
+
   // Stop displaying random numbers after 5 seconds
   setTimeout(function () {
     clearInterval(interval);
@@ -62,7 +62,7 @@ function generateNumber() {
       return;
     }
     var number = generateRandomNumber();
-    pop.play();
+
     // Check if the number has already been picked
     if (pickedNumbers.includes(number)) {
       generateNumber(); // Generate another number if already picked
@@ -99,7 +99,8 @@ function resetGame() {
   numberList.innerHTML = "";
 }
 
-// cursour animation
+
+// cursour animation 
 
 // create instance of kinet with custom settings
 var kinet = new Kinet({
@@ -109,23 +110,20 @@ var kinet = new Kinet({
 });
 
 // select circle element
-var circle = document.getElementById("circle");
+var circle = document.getElementById('circle');
 
 // set handler on kinet tick event
-kinet.on("tick", function (instances) {
-  circle.style.transform = `translate3d(${instances.x.current}px, ${
-    instances.y.current
-  }px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${
-    instances.y.velocity / 2
-  }deg)`;
+kinet.on('tick', function(instances) {
+  circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
 });
 
 // call kinet animate method on mousemove
-document.addEventListener("mousemove", function (event) {
-  kinet.animate("x", event.clientX - window.innerWidth / 2);
-  kinet.animate("y", event.clientY - window.innerHeight / 2 - 20);
+document.addEventListener('mousemove', function (event) {
+  kinet.animate('x', event.clientX - window.innerWidth/2);
+  kinet.animate('y', event.clientY - window.innerHeight/2-20);
 });
 
+<<<<<<< HEAD
 // var mutebtn = document.getElementById("mute");
 // function mute() {
 //   drums.mute = !drums.mute;
@@ -137,3 +135,5 @@ document.addEventListener("mousemove", function (event) {
 //     btn.innerHTML = '<i class="fa-solid fa-video-slash "></i>';
 //   }
 // }
+=======
+>>>>>>> parent of 08347c5 (added sound)
